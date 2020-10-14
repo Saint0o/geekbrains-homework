@@ -13,13 +13,11 @@ public class Task10 {
     }
 
     public static void isLeapYear(int year) {
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    printLeapYear(year);
-                } else printNotLeapYear(year);
-            } else printLeapYear(year);
-        } else printNotLeapYear(year);
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            printLeapYear(year);
+        } else {
+            printNotLeapYear(year);
+        }
     }
 
     public static void printNotLeapYear(int year) {
