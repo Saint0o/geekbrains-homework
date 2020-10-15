@@ -3,6 +3,7 @@ package ru.geekbrains.HomeWork2;
 // *Написать метод, которая получает на вход массив и перемешивает его элементы случайным образом. Для генерации случайного целого числа используйте класс Random.
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Task5 {
 
@@ -13,8 +14,9 @@ public class Task5 {
     }
 
     public static void mixer(int[] arr) {
+        Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
-            int randIndex = (int) (Math.random() * arr.length);
+            int randIndex = random.nextInt(arr.length);
             int tmp = arr[i];
             arr[i] = arr[randIndex];
             arr[randIndex] = tmp;
