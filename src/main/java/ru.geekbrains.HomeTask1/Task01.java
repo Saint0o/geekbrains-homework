@@ -6,12 +6,12 @@ package ru.geekbrains.HomeTask1;
 public class Task01 {
 
     public static void main(String[] args) {
-        System.out.println(theNumSumIn10to20(10, 20));
-        System.out.println(theNumSumIn10to20(3, 4));
-        System.out.println(theNumSumIn10to20(5, 7));
+        System.out.println(isNumberInRange(10, 20));
+        System.out.println(isNumberInRange(3, 4));
+        System.out.println(isNumberInRange(5, 7));
     }
 
-    public static boolean theNumSumIn10to20(int a, int b) {
+    public static boolean isNumberInRange(int a, int b) {
         int sum = a + b;
         return (sum >= 10 && sum <= 20);
     }
