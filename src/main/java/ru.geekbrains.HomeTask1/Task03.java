@@ -11,10 +11,6 @@ public class Task03 {
     }
 
     public static boolean numIsNegative(int a) {
-        if (a < 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return a < 0;
     }
 }
