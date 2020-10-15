@@ -3,15 +3,22 @@ package ru.geekbrains.HomeTask1;
 //Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
 // и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
 
+import java.util.Arrays;
+
 public class Task08 {
     public static void main(String[] args) {
         int[][] squareArrayInt = new int[10][10];
-        for (int i = 0; i < squareArrayInt.length; i++) {
-            for (int j = 0; j < squareArrayInt.length; j++) {
-                if (i == j) squareArrayInt[i][j] = 1;
-                System.out.print(squareArrayInt[i][j] + " ");
-            }
-            System.out.println();
+        fillDiags(squareArrayInt);
+        for (int[] line : squareArrayInt) {
+            System.out.println(Arrays.toString(line));
+        }
+    }
+
+    public static void fillDiags(int[][] intArr) {
+        for (int i = 0; i < intArr.length; i++) {
+            intArr[i][i] = 1;
+            intArr[i][intArr.length - i - 1] = 1;
         }
     }
 }
+
