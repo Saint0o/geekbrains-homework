@@ -5,17 +5,25 @@ import java.util.Arrays;
 public class Group {
     private Employee[] employees = new Employee[10];
     private int empCount = -1;
+    private String gName;
+
+    public Group(String gName) {
+        this.gName = gName;
+    }
+
+    public String getGName(){
+        return gName;
+    }
 
     public void addEmployee(Employee employee) {
-        if (empCount < employees.length){
+        if (empCount < employees.length) {
             for (int i = 0; i < employees.length; i++) {
                 if (employees[i] == null) {
                     employees[i] = employee;
                     break;
                 }
             }
-        }
-        else System.out.println("Группа заполнена!");
+        } else System.out.println("Группа заполнена!");
     }
 
     public void removeEmployee(int i) {
@@ -41,6 +49,7 @@ public class Group {
                 System.out.println("|Email:     | " + employees[i].getEmail());
                 System.out.println("|Возраст:   | " + employees[i].getAge());
                 System.out.println("|Должность: | " + employees[i].getPosition());
+                System.out.println("|Группа:    | " + this.getGName());
             }
         }
     }
