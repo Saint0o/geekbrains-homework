@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Group {
     private Employee[] employees = new Employee[10];
-    private int empCount = -1;
+    private int empCount = 0;
     private String gName;
 
     public Group(String gName) {
@@ -20,6 +20,7 @@ public class Group {
             for (int i = 0; i < employees.length; i++) {
                 if (employees[i] == null) {
                     employees[i] = employee;
+                    empCount++;
                     break;
                 }
             }
@@ -37,7 +38,7 @@ public class Group {
 
     public void cleanGroup() {
         Arrays.fill(employees, null);
-        empCount = -1;
+        empCount = 0;
     }
 
     public void printEmployeesInfo() {
