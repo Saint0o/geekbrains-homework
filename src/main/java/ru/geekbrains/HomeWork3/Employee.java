@@ -28,4 +28,20 @@ public class Employee {
     public String getPosition() {
         return position;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
 }
