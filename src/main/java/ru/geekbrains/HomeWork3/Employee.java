@@ -44,4 +44,12 @@ public class Employee {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    public void printInfo(){
+        System.out.println("|-----------|-------------------------------");
+        System.out.println("|Имя:       | " + getName());
+        System.out.println("|Email:     | " + getEmail());
+        System.out.println("|Возраст:   | " + getAge());
+        System.out.println("|Должность: | " + getPosition());
+    }
 }

@@ -3,7 +3,7 @@ package ru.geekbrains.HomeWork3;
 import java.util.Arrays;
 
 public class Group {
-    private Employee[] employees = new Employee[10];
+    private final Employee[] employees = new Employee[10];
     private int empCount = 0;
     private String gName;
 
@@ -42,14 +42,9 @@ public class Group {
     }
 
     public void printEmployeesInfo() {
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                System.out.println("|-----------|-------------------------------");
-                System.out.println("|ID:        | " + i);
-                System.out.println("|Имя:       | " + employees[i].getName());
-                System.out.println("|Email:     | " + employees[i].getEmail());
-                System.out.println("|Возраст:   | " + employees[i].getAge());
-                System.out.println("|Должность: | " + employees[i].getPosition());
+        for (Employee employee : employees) {
+            if (employee != null) {
+                employee.printInfo();
                 System.out.println("|Группа:    | " + this.getGName());
             }
         }
