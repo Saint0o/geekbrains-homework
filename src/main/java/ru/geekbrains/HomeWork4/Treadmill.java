@@ -8,14 +8,15 @@ public class Treadmill extends Obstacle {
         this.LENGTH = LENGTH;
     }
 
-    public int getLENGTH() {
-        return LENGTH;
-    }
-
     @Override
     public boolean pass(Participant participant) {
-        boolean pass = participant.getMAX_RUN() > LENGTH;
-        System.out.printf("%s %s пробежал беговую дорожку длиной %d %n", participant.getNAME(), pass ? "" : "не", LENGTH);
+        boolean pass = false;
+        if (participant instanceof Runnable) {
+            pass = participant.getMaxRun() > LENGTH;
+            System.out.printf("%s %s пробежал беговую дорожку длиной %d %n", participant.getNAME(), pass ? "" : "не", LENGTH);
+        } else {
+            System.out.printf("%s не умеет бегать%n", participant.getNAME());
+        }
         return pass;
     }
 }

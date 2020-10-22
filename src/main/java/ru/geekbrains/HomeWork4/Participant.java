@@ -2,25 +2,33 @@ package ru.geekbrains.HomeWork4;
 
 public abstract class Participant {
     private final String NAME;
-    private final int MAX_JUMP;
-    private final int MAX_RUN;
+    protected int maxJump = 0;
+    protected int maxRun = 0;
+    protected int maxSwim = 0;
+    protected int maxFly = 0;
 
-    protected Participant(String name, int max_jump, int max_run) {
+    protected Participant(String name) {
         NAME = name;
-        MAX_JUMP = max_jump;
-        MAX_RUN = max_run;
     }
 
     public String getNAME() {
         return NAME;
     }
 
-    public int getMAX_JUMP() {
-        return MAX_JUMP;
+    public int getMaxJump() {
+        return maxJump;
     }
 
-    public int getMAX_RUN() {
-        return MAX_RUN;
+    public int getMaxRun() {
+        return maxRun;
+    }
+
+    public int getMaxSwim() {
+        return maxSwim;
+    }
+
+    public int getMaxFly() {
+        return maxFly;
     }
 
     //    public void runAndJump(Object... obstacles) {

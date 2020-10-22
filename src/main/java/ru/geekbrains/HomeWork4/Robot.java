@@ -1,8 +1,14 @@
 package ru.geekbrains.HomeWork4;
 
-public class Robot extends Participant {
+public class Robot extends Participant implements Runnable{
 
-    protected Robot(String name, int max_jump, int max_run) {
-        super(name, max_jump, max_run);
+    protected Robot(String name, int length) {
+        super(name);
+        setMaxRun(length);
+    }
+
+    @Override
+    public void setMaxRun(int maxRun) {
+        super.maxRun = maxRun;
     }
 }

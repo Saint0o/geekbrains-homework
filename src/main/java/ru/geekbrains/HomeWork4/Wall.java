@@ -8,14 +8,15 @@ public class Wall extends Obstacle {
         this.HEIGHT = HEIGHT;
     }
 
-    public int getHEIGHT() {
-        return HEIGHT;
-    }
-
     @Override
     public boolean pass(Participant participant) {
-        boolean pass = participant.getMAX_JUMP() > HEIGHT;
-        System.out.printf("%s %s перепрыгнул стенку длиной %d %n", participant.getNAME(), pass ? "" : "не", HEIGHT);
+        boolean pass = false;
+        if (participant instanceof Jumpable) {
+            pass = participant.getMaxJump() > HEIGHT;
+            System.out.printf("%s %s перепрыгнул стенку длиной %d %n", participant.getNAME(), pass ? "" : "не", HEIGHT);
+        } else {
+            System.out.printf("%s не умеет прыгать%n", participant.getNAME());
+        }
         return pass;
     }
 }
