@@ -1,7 +1,5 @@
 package ru.geekbrains.Map;
 
-import java.util.Arrays;
-
 public class Dictionary {
 
     private final Pair[] pairs;
@@ -13,8 +11,8 @@ public class Dictionary {
     public String get(String key) {
         String value = null;
         for (Pair pair : pairs) {
-            if (pair != null){
-                if (pair.getKey().equals(key)){
+            if (pair != null) {
+                if (pair.getKey().equals(key)) {
                     value = pair.getValue();
                 }
             }
@@ -27,8 +25,8 @@ public class Dictionary {
         boolean isFull = true;
         boolean keyIsExist = false;
         for (int i = 0; i < pairs.length; i++) {
-            if (pairs[i] != null){
-                if (pairs[i].getKey().equals(key)){
+            if (pairs[i] != null) {
+                if (pairs[i].getKey().equals(key)) {
                     pairs[i] = new Pair(key, value);
                     keyIsExist = true;
                     isFull = false;
@@ -49,12 +47,17 @@ public class Dictionary {
     }
 
     public void delete(String key) {
+        boolean isExist = false;
         for (int i = 0; i < pairs.length; i++) {
-            if (pairs[i].getKey().equals(key)) {
-                pairs[i] = null;
-                break;
+            if (pairs[i] != null) {
+                if (pairs[i].getKey().equals(key)) {
+                    pairs[i] = null;
+                    isExist = true;
+                    break;
+                }
             }
         }
+        if (!isExist) System.out.println("Такого ключа нет в словаре...");
     }
 
     private static class Pair {
@@ -74,6 +77,7 @@ public class Dictionary {
         public String getValue() {
             return value;
         }
+
     }
 
     public static void main(String[] args) {
@@ -100,9 +104,11 @@ public class Dictionary {
         System.out.println(d.get("1234567"));
 
 
-
         d.delete("1234");
         System.out.println(d.get("1234"));
+
+        d.delete("123455");
+
 
     }
 }
