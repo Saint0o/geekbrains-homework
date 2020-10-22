@@ -11,28 +11,40 @@ public abstract class Participant {
         MAX_RUN = max_run;
     }
 
-    public void runAndJump(Object... obstacles) {
-        boolean isPassed = true;
-        for (Object obstacle:obstacles) {
-            if (obstacle instanceof Treadmill) {
-                if (((Treadmill) obstacle).getLENGTH() < MAX_RUN) {
-                    System.out.println(NAME + " пробежал успешно.");
-                } else {
-                    System.out.println(NAME + " не смог пробежать.");
-                    isPassed = false;
-                    break;
-                }
-            } else {
-                if (((Wall) obstacle).getHEIGHT() < MAX_JUMP) {
-                    System.out.println(NAME + " перепрыгнул успешно.");
-                } else {
-                    System.out.println(NAME + " не смог перепрыгнуть.");
-                    isPassed = false;
-                    break;
-                }
-            }
-        }
-        if (isPassed)
-        System.out.println(NAME + " все испытания прошел успешно!");
+    public String getNAME() {
+        return NAME;
     }
+
+    public int getMAX_JUMP() {
+        return MAX_JUMP;
+    }
+
+    public int getMAX_RUN() {
+        return MAX_RUN;
+    }
+
+    //    public void runAndJump(Object... obstacles) {
+//        boolean isPassed = true;
+//        for (Object obstacle:obstacles) {
+//            if (obstacle instanceof Treadmill) {
+//                if (((Treadmill) obstacle).getLENGTH() < MAX_RUN) {
+//                    System.out.println(NAME + " пробежал успешно.");
+//                } else {
+//                    System.out.println(NAME + " не смог пробежать.");
+//                    isPassed = false;
+//                    break;
+//                }
+//            } else {
+//                if (((Wall) obstacle).getHEIGHT() < MAX_JUMP) {
+//                    System.out.println(NAME + " перепрыгнул успешно.");
+//                } else {
+//                    System.out.println(NAME + " не смог перепрыгнуть.");
+//                    isPassed = false;
+//                    break;
+//                }
+//            }
+//        }
+//        if (isPassed)
+//        System.out.println(NAME + " все испытания прошел успешно!");
+//    }
 }
