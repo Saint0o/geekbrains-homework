@@ -1,21 +1,21 @@
 package ru.geekbrains.HomeWork4;
 
 public class Pool extends Obstacle {
-    private final int LENGTH;
+    private final int length;
 
     protected Pool(String name, int length) {
         super(name);
-        LENGTH = length;
+        this.length = length;
     }
 
     @Override
     public boolean pass(Participant participant) {
         boolean pass = false;
         if (participant instanceof Swimmable) {
-            pass = participant.getMaxSwim() > LENGTH;
-            System.out.printf("%s %s переплыл бассейн длиной %d %n", participant.getNAME(), pass ? "" : "не", LENGTH);
+            pass = participant.getMaxSwim() > length;
+            System.out.printf("%s %s переплыл бассейн длиной %d %n", participant.getName(), pass ? "" : "не", length);
         } else {
-            System.out.printf("%s не умеет плавать%n", participant.getNAME());
+            System.out.printf("%s не умеет плавать%n", participant.getName());
         }
         return pass;
     }

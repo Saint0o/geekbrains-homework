@@ -1,6 +1,6 @@
 package ru.geekbrains.HomeWork4;
 
-public class Robot extends Participant implements Runnable{
+public class Robot extends Participant implements Runnable {
 
     protected Robot(String name, int length) {
         super(name);

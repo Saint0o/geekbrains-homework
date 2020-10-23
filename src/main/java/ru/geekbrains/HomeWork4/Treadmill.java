@@ -1,21 +1,21 @@
 package ru.geekbrains.HomeWork4;
 
 public class Treadmill extends Obstacle {
-    private final int LENGTH;
+    private final int length;
 
-    public Treadmill(String name, int LENGTH) {
+    public Treadmill(String name, int length) {
         super(name);
-        this.LENGTH = LENGTH;
+        this.length = length;
     }
 
     @Override
     public boolean pass(Participant participant) {
         boolean pass = false;
         if (participant instanceof Runnable) {
-            pass = participant.getMaxRun() > LENGTH;
-            System.out.printf("%s %s пробежал беговую дорожку длиной %d %n", participant.getNAME(), pass ? "" : "не", LENGTH);
+            pass = participant.getMaxRun() > length;
+            System.out.printf("%s %s пробежал беговую дорожку длиной %d %n", participant.getName(), pass ? "" : "не", length);
         } else {
-            System.out.printf("%s не умеет бегать%n", participant.getNAME());
+            System.out.printf("%s не умеет бегать%n", participant.getName());
         }
         return pass;
     }

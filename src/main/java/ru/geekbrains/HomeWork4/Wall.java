@@ -1,21 +1,21 @@
 package ru.geekbrains.HomeWork4;
 
 public class Wall extends Obstacle {
-    private final int HEIGHT;
+    private final int height ;
 
-    public Wall(String name, int HEIGHT) {
+    public Wall(String name, int height) {
         super(name);
-        this.HEIGHT = HEIGHT;
+        this.height = height;
     }
 
     @Override
     public boolean pass(Participant participant) {
         boolean pass = false;
         if (participant instanceof Jumpable) {
-            pass = participant.getMaxJump() > HEIGHT;
-            System.out.printf("%s %s перепрыгнул стенку длиной %d %n", participant.getNAME(), pass ? "" : "не", HEIGHT);
+            pass = participant.getMaxJump() > height;
+            System.out.printf("%s %s перепрыгнул стенку длиной %d %n", participant.getName(), pass ? "" : "не", height);
         } else {
-            System.out.printf("%s не умеет прыгать%n", participant.getNAME());
+            System.out.printf("%s не умеет прыгать%n", participant.getName());
         }
         return pass;
     }

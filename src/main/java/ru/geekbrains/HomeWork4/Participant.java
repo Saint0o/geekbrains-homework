@@ -1,18 +1,18 @@
 package ru.geekbrains.HomeWork4;
 
 public abstract class Participant {
-    private final String NAME;
+    private final String name;
     protected int maxJump = 0;
     protected int maxRun = 0;
     protected int maxSwim = 0;
     protected int maxFly = 0;
 
     protected Participant(String name) {
-        NAME = name;
+        this.name = name;
     }
 
-    public String getNAME() {
-        return NAME;
+    public String getName() {
+        return name;
     }
 
     public int getMaxJump() {
@@ -36,23 +36,23 @@ public abstract class Participant {
 //        for (Object obstacle:obstacles) {
 //            if (obstacle instanceof Treadmill) {
 //                if (((Treadmill) obstacle).getLENGTH() < MAX_RUN) {
-//                    System.out.println(NAME + " пробежал успешно.");
+//                    System.out.println(name + " пробежал успешно.");
 //                } else {
-//                    System.out.println(NAME + " не смог пробежать.");
+//                    System.out.println(name + " не смог пробежать.");
 //                    isPassed = false;
 //                    break;
 //                }
 //            } else {
 //                if (((Wall) obstacle).getHEIGHT() < MAX_JUMP) {
-//                    System.out.println(NAME + " перепрыгнул успешно.");
+//                    System.out.println(name + " перепрыгнул успешно.");
 //                } else {
-//                    System.out.println(NAME + " не смог перепрыгнуть.");
+//                    System.out.println(name + " не смог перепрыгнуть.");
 //                    isPassed = false;
 //                    break;
 //                }
 //            }
 //        }
 //        if (isPassed)
-//        System.out.println(NAME + " все испытания прошел успешно!");
+//        System.out.println(name + " все испытания прошел успешно!");
 //    }
 }

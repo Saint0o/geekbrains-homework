@@ -1,6 +1,6 @@
 package ru.geekbrains.HomeWork4;
 
-public class Fish extends Participant implements Swimmable{
+public class Fish extends Participant implements Swimmable {
     protected Fish(String name, int maxSwim) {
         super(name);
         setMaxSwim(maxSwim);
