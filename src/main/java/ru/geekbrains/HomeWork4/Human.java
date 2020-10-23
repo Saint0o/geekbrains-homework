@@ -1,8 +1,26 @@
 package ru.geekbrains.HomeWork4;
 
-public class Human extends Participant {
+public class Human extends Participant implements Runnable, Jumpable, Swimmable {
 
-    public Human(String name, int max_jump, int max_run) {
-        super(name, max_jump, max_run);
+    public Human(String name, int maxJump, int maxRun, int maxSwim) {
+        super(name);
+        setMaxJump(maxJump);
+        setMaxRun(maxRun);
+        setMaxSwim(maxSwim);
+    }
+
+    @Override
+    public void setMaxJump(int maxJump) {
+        super.maxJump = maxJump;
+    }
+
+    @Override
+    public void setMaxRun(int maxRun) {
+        super.maxRun = maxRun;
+    }
+
+    @Override
+    public void setMaxSwim(int maxSwim) {
+        super.maxSwim = maxSwim;
     }
 }
