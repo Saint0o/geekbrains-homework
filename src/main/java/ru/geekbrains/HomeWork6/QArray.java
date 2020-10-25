@@ -13,7 +13,7 @@ public class QArray {
                     try {
                         sum += Integer.parseInt(array[i][j]);
                     } catch (NumberFormatException e) {
-                        throw new MyArrayDataException(j + 1, i + 1);
+                        throw new MyArrayDataException(j + 1, i + 1); //индекс положения ячейки в массиве начинается с 1
                     }
                 }
             }
