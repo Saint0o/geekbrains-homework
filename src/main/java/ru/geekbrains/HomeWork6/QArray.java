@@ -2,7 +2,7 @@ package ru.geekbrains.HomeWork6;
 
 public class QArray {
 
-    public static void squareArrayElementsSum(String[][] array) {
+    public static int squareArrayElementsSum(String[][] array) {
         int sum = 0;
         int row = array.length;
         final int rowAndColumnsExpected = 4;
@@ -13,14 +13,14 @@ public class QArray {
                     try {
                         sum += Integer.parseInt(array[i][j]);
                     } catch (NumberFormatException e) {
-                        throw new MyArrayDataException(j + 1, i + 1); //индекс положения ячейки в массиве начинается с 1
+                        throw new MyArrayDataException(j + 1, 4 - i); //индекс положения ячейки в массиве начинается с 1
                     }
                 } else {
                     throw new MyArraySizeException(row, columns, rowAndColumnsExpected);
                 }
             }
         }
-        System.out.println(sum);
+        return sum;
     }
 
     public static void main(String[] args) {
@@ -32,32 +32,32 @@ public class QArray {
         };
 
         String[][] sizeExceptionArray = {
-                {"1", "2", "3", "4"},
-                {"1", "2", "3", "4"},
-                {"1", "2", "3", "4"}
+                {"1", "2", "3"},
+                {"1", "2", "3"},
+                {"1", "2", "3"}
         };
 
         String[][] dataExceptionArray = {
                 {"1", "2", "3", "4"},
                 {"1", "2", "3", "4"},
-                {"1", "2", "3", "4"},
-                {"1", "s", "3", "2"}
+                {"1", "s", "3", "4"},
+                {"1", "1", "3", "2"}
         };
 
         try {
-            squareArrayElementsSum(array);
+            System.out.println(squareArrayElementsSum(array));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         try {
-            squareArrayElementsSum(sizeExceptionArray);
+            System.out.println(squareArrayElementsSum(sizeExceptionArray));
         } catch (MyArraySizeException e) {
             e.printStackTrace();
         }
 
         try {
-            squareArrayElementsSum(dataExceptionArray);
+            System.out.println(squareArrayElementsSum(dataExceptionArray));
         } catch (MyArrayDataException e) {
             e.printStackTrace();
         }
