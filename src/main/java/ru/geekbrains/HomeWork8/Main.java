@@ -12,7 +12,6 @@ public class Main {
         phonebook.add("Ноунейм","99999999999");
         phonebook.add("Ноунейм","92999999999");
         phonebook.add("Ноунейм","92999999999");
-        phonebook.add("Серебряков", "+799999992");
 
         System.out.println(phonebook.get("Пупкин"));
         System.out.println(phonebook.get("Ноунейм"));
