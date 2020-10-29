@@ -3,30 +3,6 @@ package ru.geekbrains.HomeWork8;
 import java.util.*;
 
 public class CountWords {
-    public static void main(String[] args) {
-        ArrayList<String> words = new ArrayList<>();
-        words.add("привет");
-        words.add("привет");
-        words.add("один");
-        words.add("два");
-        words.add("два");
-        words.add("три");
-        words.add("три");
-        words.add("три");
-        words.add("1");
-        words.add("1");
-        words.add("1");
-        words.add("1");
-        words.add("1");
-        words.add("1");
-        words.add("одифыдофад");
-        words.add("одифыдофадвы");
-        words.add("одифыдофадвывывф");
-
-        System.out.println(countWords(words));
-
-        System.out.println(uniqueWordsList(words));
-    }
 
     /**
      * Вывод уникальных слов (котрые встречаются один раз)
