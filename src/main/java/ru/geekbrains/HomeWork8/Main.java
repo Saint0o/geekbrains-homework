@@ -2,7 +2,8 @@ package ru.geekbrains.HomeWork8;
 
 import java.util.ArrayList;
 
-import static ru.geekbrains.HomeWork8.CountWords.*;
+import static ru.geekbrains.HomeWork8.CountWords.countWords;
+import static ru.geekbrains.HomeWork8.CountWords.uniqueWordsList;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,7 +35,7 @@ public class Main {
 
         System.out.println(uniqueWordsList(words));
 
-        System.out.println("\n<---------------------Телефонный справочник---------------------------->\n" );
+        System.out.println("\n<---------------------Телефонный справочник---------------------------->\n");
 
 
 // Задание с телефонным справочником.
@@ -46,9 +47,9 @@ public class Main {
         phonebook.add("Пупкин", "88005253535");
         phonebook.add("Пупкин", "88005553535");
         phonebook.add("Пупкин", "88005553535");
-        phonebook.add("Ноунейм","99999999999");
-        phonebook.add("Ноунейм","92999999999");
-        phonebook.add("Ноунейм","92999999999");
+        phonebook.add("Ноунейм", "99999999999");
+        phonebook.add("Ноунейм", "92999999999");
+        phonebook.add("Ноунейм", "92999999999");
 
         System.out.println(phonebook.get("Пупкин"));
         System.out.println(phonebook.get("Ноунейм"));

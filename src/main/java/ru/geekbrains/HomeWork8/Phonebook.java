@@ -12,6 +12,7 @@ public class Phonebook {
     /**
      * Добавление фамилии и номера телефона. Можно было сделать так, чтобы ключом был номер телефона, но метод ниже
      * показался мне оптимальнее.
+     *
      * @param lastName
      * @param telephoneNumber
      */
@@ -33,6 +34,7 @@ public class Phonebook {
 
     /**
      * Вывод листа номеров телефона по фамилии.
+     *
      * @param lastName
      * @return
      */
