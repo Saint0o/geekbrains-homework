@@ -1,4 +1,4 @@
-package ru.geekbrains.HomeWork2;
+package ru.geekbrains.HomeWork02;
 
 //Написать реализацию алгоритма сортировки массива методом выбора (selection sort).
 
