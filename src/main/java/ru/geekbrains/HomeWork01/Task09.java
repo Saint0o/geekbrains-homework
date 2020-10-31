@@ -1,4 +1,4 @@
-package ru.geekbrains.HomeTask1;
+package ru.geekbrains.HomeWork01;
 
 //* Задать одномерный массив и найти в нем минимальный и максимальный элементы;
 

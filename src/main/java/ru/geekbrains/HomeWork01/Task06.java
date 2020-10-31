@@ -1,4 +1,4 @@
-package ru.geekbrains.HomeTask1;
+package ru.geekbrains.HomeWork01;
 
 //Задать пустой целочисленный массив размером 8. С помощью цикла заполнить его значениями 2 5 8 11 14 17 20 23;
 
