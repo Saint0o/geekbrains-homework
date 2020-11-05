@@ -15,17 +15,15 @@ public class Client {
             Socket socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            try {
-                while (true) {
-                    String str = reader.readLine();
-                    if (str.equalsIgnoreCase("/end")) {
-                        break;
-                    }
-                    out.writeUTF(str);
+
+            while (true) {
+                String str = reader.readLine();
+                if (str.equalsIgnoreCase("/end")) {
+                    break;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+                out.writeUTF(str);
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
