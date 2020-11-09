@@ -65,9 +65,9 @@ public class Repository<T> {
             // Проверка полей с аннотацией @DbId
 
             if (idCount == 0) {
-                throw new SQLException("Поле с аннотацией @DbId не найдено");
+                throw new IllegalArgumentException("Поле с аннотацией @DbId не найдено");
             } else if (idCount > 1) {
-                throw new SQLException("Полей с аннотацией @DbId больше одного");
+                throw new IllegalArgumentException("Полей с аннотацией @DbId больше одного");
             }
 
         }
