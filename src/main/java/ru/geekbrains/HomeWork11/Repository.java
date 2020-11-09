@@ -64,12 +64,14 @@ public class Repository<T> {
 
             // Проверка полей с аннотацией @DbId
 
-            if (idCount == 0) {
-                throw new IllegalArgumentException("Поле с аннотацией @DbId не найдено");
-            } else if (idCount > 1) {
+            if (idCount > 1) {
                 throw new IllegalArgumentException("Полей с аннотацией @DbId больше одного");
             }
 
+        }
+
+        if (idCount == 0) {
+            throw new IllegalArgumentException("Поле с аннотацией @DbId не найдено");
         }
 
         createTableIfNotExists();
