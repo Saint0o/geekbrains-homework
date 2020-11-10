@@ -1,5 +1,7 @@
 package ru.geekbrains.HomeWork12;
 
+import java.util.Arrays;
+
 public class Main {
 
     static String str = "Взять строку состоящую из 100 слов разделенных пробелом получить список слов длиннее 5 символов и " +
@@ -23,12 +25,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(StreamAPI.lengthMoreFiveWords(str));
 
-        System.out.println(StreamAPI.uniqueWords(qArray));
+        System.out.println(StreamAPI.uniqueWordsInSquareArray(qArray));
 
-        System.out.println(StreamAPI.sumEvenNums(100, 200));
+        System.out.println(StreamAPI.evenNumSum(100, 200));
 
-        System.out.println(StreamAPI.lengthAllStrings(str.split(" ")));
+        System.out.println(StreamAPI.lengthSumAllStrings(str.split(" ")));
 
-        System.out.println(StreamAPI.firstThreeWords(str1.split(" ")));
+        System.out.println(Arrays.toString(StreamAPI.firstThreeWords(str1.split(" "))));
     }
 }

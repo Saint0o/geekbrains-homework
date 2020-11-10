@@ -20,7 +20,7 @@ public class StreamAPI {
     /**
      * Найти список уникальных слов в двумерном массиве размером 5х5
      */
-    public static List<String> uniqueWords(String[][] arr) {
+    public static List<String> uniqueWordsInSquareArray(String[][] arr) {
         return Arrays.stream(arr)
                 .flatMap(Arrays::stream)
                 .distinct()
@@ -30,7 +30,7 @@ public class StreamAPI {
     /**
      * Посчитать сумму четных чисел в пределах от 100 до 200 (включительно)
      */
-    public static int sumEvenNums(int a, int b) {
+    public static int evenNumSum(int a, int b) {
         return Stream.iterate(a, n -> n + 1)
                 .limit(b - a + 1)
                 .filter(x -> x % 2 == 0)
@@ -41,7 +41,7 @@ public class StreamAPI {
     /**
      * Посчитать суммарную длину строк в одномерном массиве
      */
-    public static int lengthAllStrings(String[] arr) {
+    public static int lengthSumAllStrings(String[] arr) {
         return Arrays.stream(arr)
                 .mapToInt(String::length)
                 .sum();
@@ -50,8 +50,11 @@ public class StreamAPI {
     /**
      * Из массива слов получить первые три слова в алфавитном порядке
      */
-    public static List<String> firstThreeWords(String[] arr) {
-        return Arrays.stream(arr).sorted(String::compareTo).limit(3).collect(Collectors.toList());
+    public static String[] firstThreeWords(String[] arr) {
+        return Arrays.stream(arr)
+                .sorted(String::compareTo)
+                .limit(3)
+                .toArray(String[]::new);
     }
 
 }
